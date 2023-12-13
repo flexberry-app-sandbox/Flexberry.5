@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-5-склады-e",
+  "editForm": "i-i-s-5-склады-e",
+  "external": false,
+  "caption": "Склады",
+  "name": "IIS5СкладыL",
+  "className": "СкладыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-5-склады",
+      "modelProjection": "СкладыL"
+    }
+  ]
+}

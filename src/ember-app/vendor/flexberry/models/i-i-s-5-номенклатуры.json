@@ -1,0 +1,106 @@
+﻿{
+  "name": "IIS5Номенклатуры",
+  "modelName": "i-i-s-5-номенклатуры",
+  "className": "Номенклатуры",
+  "nameSpace": "IIS.5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номенклатура",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "едИзмер",
+      "relatedTo": "i-i-s-5-ед-измер",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "НоменклатурыE",
+      "modelName": "i-i-s-5-номенклатуры",
+      "attrs": [
+        {
+          "name": "номенклатура",
+          "caption": "Номенклатура",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ЕдИзмер",
+          "lookupValueField": "едИзмер",
+          "relationName": "ЕдИзмер",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "едИзмер",
+              "caption": "Ед измер",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Ед измер",
+          "name": "едИзмер",
+          "relatedTo": "i-i-s-5-ед-измер",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "НоменклатурыL",
+      "modelName": "i-i-s-5-номенклатуры",
+      "attrs": [
+        {
+          "name": "номенклатура",
+          "caption": "Номенклатура",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ЕдИзмер",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "едИзмер",
+              "caption": "Ед измер",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Ед измер",
+          "name": "едИзмер",
+          "relatedTo": "i-i-s-5-ед-измер",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

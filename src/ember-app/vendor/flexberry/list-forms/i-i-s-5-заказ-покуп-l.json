@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-5-заказ-покуп-e",
+  "editForm": "i-i-s-5-заказ-покуп-e",
+  "external": false,
+  "caption": "Заказ покуп",
+  "name": "IIS5ЗаказПокупL",
+  "className": "ЗаказПокупL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-5-заказ-покуп",
+      "modelProjection": "ЗаказПокупL"
+    }
+  ]
+}

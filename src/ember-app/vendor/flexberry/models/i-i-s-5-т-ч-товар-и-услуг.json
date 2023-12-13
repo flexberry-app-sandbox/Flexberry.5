@@ -1,0 +1,122 @@
+﻿{
+  "name": "IIS5ТЧТоварИУслуг",
+  "modelName": "i-i-s-5-т-ч-товар-и-услуг",
+  "className": "ТЧТоварИУслуг",
+  "nameSpace": "IIS.5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "количестов",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "суммаНДС",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "цена",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "номенклатуры",
+      "relatedTo": "i-i-s-5-номенклатуры",
+      "inverse": null
+    },
+    {
+      "polymorphic": true,
+      "presence": true,
+      "name": "остатНаСклад",
+      "relatedTo": "i-i-s-5-остат-на-склад",
+      "inverse": "тЧТоварИУслуг"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТЧТоварИУслугE",
+      "modelName": "i-i-s-5-т-ч-товар-и-услуг",
+      "attrs": [
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "суммаНДС",
+          "caption": "Сумма НДС",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "количестов",
+          "caption": "Количестов",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Номенклатура",
+          "lookupValueField": "номенклатура",
+          "relationName": "Номенклатуры",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номенклатура",
+              "caption": "Номенклатура",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Номенклатуры",
+          "name": "номенклатуры",
+          "relatedTo": "i-i-s-5-номенклатуры",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "ЕдИзмер",
+      "projection": "ЕдИзмерL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Номенклатуры",
+  "name": "IIS5НоменклатурыE",
+  "className": "НоменклатурыE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-5-номенклатуры",
+      "modelProjection": "НоменклатурыE"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+﻿{
+  "applicationCaption": "5",
+  "applicationTitle": "5",
+  "items": [
+    {
+      "link": null,
+      "menuName": "5",
+      "caption": "5",
+      "title": "5",
+      "children": [
+        {
+          "link": "i-i-s-5-отчет-о-продажах-l",
+          "menuName": null,
+          "caption": "Отчет о продажах",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-5-склады-l",
+          "menuName": null,
+          "caption": "Склады",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-5-организации-l",
+          "menuName": null,
+          "caption": "Организации",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-5-ед-измер-l",
+          "menuName": null,
+          "caption": "Ед измер",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-5-заказ-покуп-l",
+          "menuName": null,
+          "caption": "Заказ покуп",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-5-номенклатуры-l",
+          "menuName": null,
+          "caption": "Номенклатуры",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-5-остат-на-склад-l",
+          "menuName": null,
+          "caption": "Остат на склад",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-5-подразеления-l",
+          "menuName": null,
+          "caption": "Подразеления",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-5-контрагенты-l",
+          "menuName": null,
+          "caption": "Контрагенты",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

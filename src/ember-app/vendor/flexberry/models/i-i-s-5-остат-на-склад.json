@@ -1,0 +1,253 @@
+﻿{
+  "name": "IIS5ОстатНаСклад",
+  "modelName": "i-i-s-5-остат-на-склад",
+  "className": "ОстатНаСклад",
+  "nameSpace": "IIS.5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаНачала",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаОкончания",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "состОплат",
+      "type": "i-i-s-5-сост-оплаты",
+      "flexberryType": "СостОплаты",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "состОтгруз",
+      "type": "i-i-s-5-сост-огрузки",
+      "flexberryType": "СостОгрузки",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "суммВклНДС",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "организации",
+      "relatedTo": "i-i-s-5-организации",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "склады",
+      "relatedTo": "i-i-s-5-склады",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "тЧТоварИУслуг",
+      "relatedTo": "i-i-s-5-т-ч-товар-и-услуг",
+      "inverse": "остатНаСклад"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ОстатНаСкладE",
+      "modelName": "i-i-s-5-остат-на-склад",
+      "attrs": [
+        {
+          "name": "состОплат",
+          "caption": "Сост оплат",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "суммВклНДС",
+          "caption": "Сумм вкл НДС",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "состОтгруз",
+          "caption": "Сост отгруз",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "датаОкончания",
+          "caption": "Дата окончания",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Организация",
+          "lookupValueField": "организация",
+          "relationName": "Организации",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "организация",
+              "caption": "Организация",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Организации",
+          "name": "организации",
+          "relatedTo": "i-i-s-5-организации",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Склад",
+          "lookupValueField": "склад",
+          "relationName": "Склады",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "склад",
+              "caption": "Склад",
+              "hidden": true,
+              "index": 8
+            }
+          ],
+          "index": 7,
+          "type": "standard",
+          "caption": "Склады",
+          "name": "склады",
+          "relatedTo": "i-i-s-5-склады",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ТЧТоварИУслугE",
+          "caption": "Т ч товар и услуг",
+          "name": "тЧТоварИУслуг",
+          "relatedTo": "i-i-s-5-т-ч-товар-и-услуг",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ОстатНаСкладL",
+      "modelName": "i-i-s-5-остат-на-склад",
+      "attrs": [
+        {
+          "name": "состОплат",
+          "caption": "Сост оплат",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "суммВклНДС",
+          "caption": "Сумм вкл НДС",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "состОтгруз",
+          "caption": "Сост отгруз",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "датаОкончания",
+          "caption": "Дата окончания",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Организации",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "организация",
+              "caption": "Организация",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Организация",
+          "name": "организации",
+          "relatedTo": "i-i-s-5-организации",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Склады",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "склад",
+              "caption": "Склад",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Склад",
+          "name": "склады",
+          "relatedTo": "i-i-s-5-склады",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

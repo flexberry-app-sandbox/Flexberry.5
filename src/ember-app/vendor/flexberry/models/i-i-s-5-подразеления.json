@@ -1,0 +1,54 @@
+﻿{
+  "name": "IIS5Подразеления",
+  "modelName": "i-i-s-5-подразеления",
+  "className": "Подразеления",
+  "nameSpace": "IIS.5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "подразделение",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПодразеленияE",
+      "modelName": "i-i-s-5-подразеления",
+      "attrs": [
+        {
+          "name": "подразделение",
+          "caption": "Подразделение",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ПодразеленияL",
+      "modelName": "i-i-s-5-подразеления",
+      "attrs": [
+        {
+          "name": "подразделение",
+          "caption": "Подразделение",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

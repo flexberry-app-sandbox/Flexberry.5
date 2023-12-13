@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-5-номенклатуры-e",
+  "editForm": "i-i-s-5-номенклатуры-e",
+  "external": false,
+  "caption": "Номенклатуры",
+  "name": "IIS5НоменклатурыL",
+  "className": "НоменклатурыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-5-номенклатуры",
+      "modelProjection": "НоменклатурыL"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+<h3 class="ui header">{{t "forms.i-i-s-5-остат-на-склад-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field" data-test-i-i-s-5-остат-на-склад-e-состОплат="true">
+    <label>{{t "forms.i-i-s-5-остат-на-склад-e.состОплат-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-5-сост-оплаты")
+      value=model.состОплат
+      class=(if (v-get validationModel "состОплат" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "состОплат" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.суммВклНДС
+      class=(if (v-get validationModel "суммВклНДС" "isInvalid") "error")
+      label=(t "forms.i-i-s-5-остат-на-склад-e.суммВклНДС-caption")
+      data-test-i-i-s-5-остат-на-склад-e-суммВклНДС=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "суммВклНДС" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-5-остат-на-склад-e.датаНачала-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаНачала
+      class=(if (v-get validationModel "датаНачала" "isInvalid") "error")
+      data-test-i-i-s-5-остат-на-склад-e-датаНачала=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаНачала" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-5-остат-на-склад-e-состОтгруз="true">
+    <label>{{t "forms.i-i-s-5-остат-на-склад-e.состОтгруз-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-5-сост-огрузки")
+      value=model.состОтгруз
+      class=(if (v-get validationModel "состОтгруз" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "состОтгруз" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-5-остат-на-склад-e.датаОкончания-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаОкончания
+      class=(if (v-get validationModel "датаОкончания" "isInvalid") "error")
+      data-test-i-i-s-5-остат-на-склад-e-датаОкончания=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаОкончания" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-5-остат-на-склад-e.организации-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.организации
+      displayAttributeName="организация"
+      autocomplete=true
+      relationName="организации"
+      projection="ОрганизацииL"
+      title=(t "forms.i-i-s-5-остат-на-склад-e.организации-caption")
+      readonly=readonly
+      componentName="организацииLookup"
+      class=(if (v-get validationModel "организации" "isInvalid") "error")
+      data-test-i-i-s-5-остат-на-склад-e-организации=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "организации" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-5-остат-на-склад-e.склады-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.склады
+      displayAttributeName="склад"
+      autocomplete=true
+      relationName="склады"
+      projection="СкладыL"
+      title=(t "forms.i-i-s-5-остат-на-склад-e.склады-caption")
+      readonly=readonly
+      componentName="складыLookup"
+      class=(if (v-get validationModel "склады" "isInvalid") "error")
+      data-test-i-i-s-5-остат-на-склад-e-склады=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "склады" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-5-остат-на-склад-e.тЧТоварИУслуг-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="тЧТоварИУслугGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.тЧТоварИУслуг
+      content=model.тЧТоварИУслуг
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "тЧТоварИУслуг" "isInvalid") "error")
+      data-test-i-i-s-5-остат-на-склад-e-тЧТоварИУслуг=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "тЧТоварИУслуг" "message")}}
+  </div>
+</form>

@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Подразеления",
+  "name": "IIS5ПодразеленияE",
+  "className": "ПодразеленияE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-5-подразеления",
+      "modelProjection": "ПодразеленияE"
+    }
+  ]
+}

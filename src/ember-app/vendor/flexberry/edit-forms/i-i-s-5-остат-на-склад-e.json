@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Организации",
+      "projection": "ОрганизацииL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Склады",
+      "projection": "СкладыL",
+      "detailModelName": null
+    },
+    {
+      "master": "номенклатуры",
+      "displayAttributeName": "номенклатура",
+      "required": true,
+      "relationName": "ТЧТоварИУслуг.Номенклатуры",
+      "projection": "НоменклатурыL",
+      "detailModelName": "i-i-s-5-т-ч-товар-и-услуг"
+    }
+  ],
+  "external": false,
+  "caption": "Остат на склад",
+  "name": "IIS5ОстатНаСкладE",
+  "className": "ОстатНаСкладE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-5-остат-на-склад",
+      "modelProjection": "ОстатНаСкладE"
+    }
+  ]
+}

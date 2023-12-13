@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-5-остат-на-склад-e",
+  "editForm": "i-i-s-5-остат-на-склад-e",
+  "external": false,
+  "caption": "Остат на склад",
+  "name": "IIS5ОстатНаСкладL",
+  "className": "ОстатНаСкладL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-5-остат-на-склад",
+      "modelProjection": "ОстатНаСкладL"
+    }
+  ]
+}

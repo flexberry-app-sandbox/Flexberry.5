@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-5-ед-измер-e",
+  "editForm": "i-i-s-5-ед-измер-e",
+  "external": false,
+  "caption": "Ед измер",
+  "name": "IIS5ЕдИзмерL",
+  "className": "ЕдИзмерL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-5-ед-измер",
+      "modelProjection": "ЕдИзмерL"
+    }
+  ]
+}
